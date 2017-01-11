@@ -46,7 +46,7 @@ def new_photo(request):
             new_photo.user = request.user
             new_photo.save()
 
-            return redirect(new_photo.get_absolute_url())
+            return redirect('view_photos')
 
     return render(
         request,
